@@ -4,21 +4,25 @@
     <meta charset="utf-8">
     <title>Filmsitesi</title>
     <link rel="stylesheet" href="/static/main.css">
+    <script type="text/javascript"
+    src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
   </head>
   <body>
 
     <script>
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-          if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
-            document.getElementById("main-header").style.background = "red";
-          } else {
-            document.getElementById("main-header").style.background = "linear-gradient(rgba(10,10,10,1), rgba(20,20,20,0))";
-          }
-        }
+    $(window).on("scroll", function() {
+      if ($(window).scrollTop() > 10) {
+        $(".main-header").addClass("scrolled");
+        $(".main-header").removeClass("no-scroll");
+      } else {
+        $(".main-header").addClass("no-scroll");
+        $(".main-header").removeClass("scrolled");
+      }
+    });
     </script>
-    <div class="main-header">
+
+    <div class="main-header no-scroll">
       <div class="left-header">
         <img src="static/logo.png" class="logo" alt="Pascia Logo">
         <div class="nav-bar">
