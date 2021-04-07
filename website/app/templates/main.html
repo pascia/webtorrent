@@ -6,30 +6,29 @@
     <link rel="stylesheet" href="/static/main.css">
   </head>
   <body>
-    
+
     <script>
         window.onscroll = function() {scrollFunction()};
 
         function scrollFunction() {
-          if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-            document.getElementById("main-header").style.background-image = "linear-gradient(rgba(10,10,10,1), rgba(20,20,20,1))";
+          if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+            document.getElementById("main-header").style.background = "red";
           } else {
-            document.getElementById("main-header").style.background-image = "linear-gradient(rgba(10,10,10,1), rgba(20,20,20,0))";
+            document.getElementById("main-header").style.background = "linear-gradient(rgba(10,10,10,1), rgba(20,20,20,0))";
           }
         }
     </script>
-
-    <div class="top">
-      <div class="main-header">
-        <div class="left-header">
-          <img src="static/logo.png" class="logo" alt="Pascia Logo">
-          <div class="nav-bar">
-            <a class="nav nav-sel" href="#">Ana Sayfa</a>
-            <a class="nav" href="#">Diziler</a>
-            <a class="nav" href="#">Filmler</a>
-          </div>
+    <div class="main-header">
+      <div class="left-header">
+        <img src="static/logo.png" class="logo" alt="Pascia Logo">
+        <div class="nav-bar">
+          <a class="nav nav-sel" href="#">Ana Sayfa</a>
+          <a class="nav" href="#">Diziler</a>
+          <a class="nav" href="#">Filmler</a>
         </div>
       </div>
+    </div>
+    <div class="top">
         {{ ip }}
 
     </div>
