@@ -6,6 +6,18 @@
     <link rel="stylesheet" href="/static/main.css">
   </head>
   <body>
+    
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            document.getElementById("main-header").style.background-image = "linear-gradient(rgba(10,10,10,1), rgba(20,20,20,1))";
+          } else {
+            document.getElementById("main-header").style.background-image = "linear-gradient(rgba(10,10,10,1), rgba(20,20,20,0))";
+          }
+        }
+    </script>
 
     <div class="top">
       <div class="main-header">
@@ -19,7 +31,8 @@
         </div>
       </div>
         {{ ip }}
-    </div>
 
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>a
   </body>
 </html>

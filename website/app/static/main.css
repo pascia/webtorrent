@@ -16,7 +16,9 @@ div{
     padding-left: 4vw;
     padding-right: 4vw;
     padding-top: 15px;
-    position: sticky;
+    position: fixed;
+    width: 100vw;
+    transition: 0.2s;
   }
 
   .main-header > .left-header{
