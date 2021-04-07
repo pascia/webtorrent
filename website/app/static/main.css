@@ -1,0 +1,86 @@
+*{
+  background: #202020;
+  color: white;
+  margin: 0;
+}
+
+div{
+  color: white;
+}
+
+@media only screen and (min-width: 600px){
+  .main-header{
+    background: rgba(0,0,0,0);
+    background-image: linear-gradient(rgba(10,10,10,1), rgba(20,20,20,0));
+    height: 60px;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 15px;
+    position: sticky;
+  }
+
+  .main-header > .left-header{
+    background: rgba(0,0,0,0);
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav-bar{
+    display: flex;
+    flex-basis: 5px;
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: nowrap;
+    margin-top: 13px;
+    margin-left: 30px;
+    font-size: 0.8em;
+    background-color: rgba(0,0,0,0);
+  }
+
+  .nav{
+    text-decoration: none;
+    font-family: sans-serif;
+    padding-top: 4px;
+    width: 80px;
+    background-color: rgba(0,0,0,0);
+  }
+
+  .nav-sel{
+    font-weight: bolder;
+    background-color: rgba(0,0,0,0);
+  }
+
+  .logo{
+    background: rgba(0,0,0,0);
+    height: 40px;
+    padding-top: 5px;
+  }
+
+  .top{
+    background-image: url("charlie.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45vw;
+    width: %100;
+  }
+
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px){
+  .main-header{
+    background-image: linear-gradient(rgba(10,10,10,1), rgba(20,20,20,1));
+    height: 35px;
+    padding-left: 10px;
+  }
+
+  .header{
+
+  }
+}
