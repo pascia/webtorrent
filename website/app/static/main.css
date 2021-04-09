@@ -1,7 +1,10 @@
-*{
+body{
   background: #202020;
-  color: white;
   margin: 0;
+}
+
+a{
+  color: white;
 }
 
 div{
@@ -18,15 +21,46 @@ div{
     padding-top: 15px;
     position: fixed;
     width: 100vw;
-    transition: 0.2s;
+    transition: 0.1s;
+    background: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,0));
+  }
+
+  @keyframes scroll {
+    0%   {background: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,0));}
+    10%  {background: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,0.1));}
+    20%  {background: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,0.2));}
+    30%  {background: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,0.3));}
+    40%  {background: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,0.4));}
+    50%  {background: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,0.5));}
+    60%  {background: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,0.6));}
+    70%  {background: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,0.7));}
+    80%  {background: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,0.8));}
+    90%  {background: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,0.9));}
+    100% {background: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,1));}
+  }
+
+  @keyframes unscroll {
+    0%   {background: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,1));}
+    10%  {background: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,0.9));}
+    20%  {background: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,0.8));}
+    30%  {background: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,0.7));}
+    40%  {background: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,0.6));}
+    50%  {background: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,0.5));}
+    60%  {background: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,0.4));}
+    70%  {background: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,0.3));}
+    80%  {background: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,0.2));}
+    90%  {background: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,0.1));}
+    100% {background: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,0));}
   }
 
   .main-header.no-scroll{
-    background-image: linear-gradient(rgba(10,10,10,1), rgba(20,20,20,0));
+    animation: 0.3s linear unscroll;
+    background: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,0));
   }
 
   .main-header.scrolled{
-    background-image: linear-gradient(rgba(10,10,10,1), rgba(20,20,20,1));
+    animation: 0.3s linear scroll;
+    background: linear-gradient(rgba(32,32,32,1), rgba(32,32,32,1));
   }
 
   .main-header > .left-header{
@@ -75,6 +109,39 @@ div{
     width: %100;
   }
 
+  .main-title{
+    padding-top: 10vw;
+  }
+
+  .titlebox{
+    height: 30vw;
+  }
+
+  .gradient{
+    height: calc(5vw - 0.66em);
+    background: linear-gradient(rgba(32,32,32,0), rgba(32,32,32,1) 83%);
+    text-overflow: ellipsis;
+  }
+
+  .gradient h2{
+    font-size: calc( 0.66em + 1vw);
+    margin-left: 2vw;
+  }
+
+  @keyframes shrink {
+    0%   {font-size: calc( 0.3em + 0.5vw ); margin-left: 1em;}
+    70%  {font-size: calc( 0.45em + 0.75vw ); margin-left: calc(0.75em - 0.15em);}
+    100% {font-size: calc( 0.45em + 0.75vw ); margin-left: calc(0.75em - 0.15em);}
+  }
+
+  .gradient a.ani{
+    text-decoration: none;
+    font-size: calc( 0.33em + 0.5vw );
+    margin-left: 1em;
+    animation: 1s linear shrink;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
 }
 
 
@@ -85,7 +152,7 @@ div{
 
 @media only screen and (max-width: 600px){
   .main-header{
-    background-image: linear-gradient(rgba(10,10,10,1), rgba(20,20,20,1));
+    background-image: linear-gradient(rgba(10,10,10,1), rgba(32,32,32,1));
     height: 35px;
     padding-left: 10px;
   }

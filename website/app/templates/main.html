@@ -12,17 +12,19 @@
 
     <script>
     $(window).on("scroll", function() {
-      if ($(window).scrollTop() > 10) {
-        $(".main-header").addClass("scrolled");
-        $(".main-header").removeClass("no-scroll");
+      if ($(window).scrollTop() > 100) {
+          $(".main-header").addClass("scrolled");
+          $(".main-header").removeClass("no-scroll");
       } else {
-        $(".main-header").addClass("no-scroll");
-        $(".main-header").removeClass("scrolled");
+        if ($(".main-header").hasClass("scrolled")) {
+          $(".main-header").addClass("no-scroll");
+          $(".main-header").removeClass("scrolled");
+        }
       }
     });
     </script>
 
-    <div class="main-header no-scroll">
+    <div class="main-header">
       <div class="left-header">
         <img src="static/logo.png" class="logo" alt="Pascia Logo">
         <div class="nav-bar">
@@ -33,9 +35,16 @@
       </div>
     </div>
     <div class="top">
-        {{ ip }}
-
+        <div class="main-title">
+          <div class="titlebox">
+            {{ ip }}
+          </div>
+          <div class="gradient">
+            <h2>editörün seçimleri <a href="populars" class="ani">▼</a> </h2>
+          </div>
+        </div>
     </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>a
     <br><br><br><br><br><br><br><br><br><br><br><br><br>a
   </body>
 </html>
